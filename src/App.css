@@ -1,38 +1,152 @@
-.App {
-  text-align: center;
+body {
+  background-color: var(--secondry-color);
+  font-family: ubantu;
+  background-image: url(assets/images/bg.png);
+  background-size: cover;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* .container,
+.container * {
+  border: 1px solid red;
+} */
+.container {
   min-height: 100vh;
+  background: linear-gradient(
+    270deg,
+    transparent 70%,
+    var(--primary-color) 40%
+  );
   display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+.left {
+  width: 30%;
+  padding: 0 2em;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 3em;
+  flex-direction: column;
 }
-
-.App-link {
-  color: #61dafb;
+.right {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.left,
+.right {
+  height: 100vh;
+}
+.brandLogo {
+  display: flex;
+  align-items: center;
+  background-color: var(--secondry-color);
+  padding-left: 2em;
+  gap: 10px;
+  border-radius: 50px;
+}
+.brandLogo .logo {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+.logoText h1{
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.primaryHeading {
+  color: #fff;
+  font-size: 1.5em;
+  line-height: 2.6em;
+}
+.stakeBtn {
+  padding: 10px 2em;
+  font-weight: bold;
+  background-color: var(--secondry-color);
+  font-size: 1em;
+  color: var(--primary-color);
+  position: relative;
+}
+.stakeBtn::before,
+.stakeBtn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  padding: 1px 0 1px 0;
+  width: 100%;
+  background-color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+.stakeBtn::before {
+  top: 1%;
+}
+.stakeBtn::after {
+  top: 94%;
+}
+.stakeBtn:hover.stakeBtn::before {
+  left: 1.5em;
+}
+.stakeBtn:hover.stakeBtn::after {
+  left: -1.5em;
+}
+.walletContainer {
+  width: 350px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 2em 1em 1em 1em;
+    gap: 1.5em;
+}
+.logoAvatar {
+  width: 100px;
+  height: 100px;
+}
+.logoAvatar img {
+  width: 100%;
+  height: 100%;
+}
+.walletConnectBtn {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: #ffff;
+    border-radius: 8px;
+    padding: 10px 0;
+    transition: all 0.2s ease-in-out;
+}
+.walletConnectBtn:hover {
+    background-color: #2711cc;
+}
+.metamaskBtn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 2px 3em;
+    gap: 1em;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+}
+.metamaskBtn:hover{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.metamaskBtn p{
+    font-size: 1.3em;
+    font-weight: 500;
+}
+.metamaskLogo{
+    width: 50px;
+    height: 50px;
+}
+.metamaskLogo img{
+    width: 100%;
+    height: 100%;
 }

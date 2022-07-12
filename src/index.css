@@ -1,13 +1,49 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button,
+input {
+  outline: none;
+  border: none;
+}
+button{
+  cursor: pointer;
+}
+a{
+  text-decoration: none;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+:root{
+  --primary-color: #4630eb;
+  --secondry-color: #ffffff;
+}
+@font-face{
+  src: url(assets/fonts/Azonix.otf);
+  font-family: azonix;
+}
+@font-face{
+  src: url(assets/fonts/Blanka.otf);
+  font-family: blanka;
+}
+@font-face{
+  src: url(assets/fonts/Ubuntu-Bold.ttf);
+  font-family: ubantu;
+}
+@font-face{
+  src: url(assets/fonts/Ubuntu-Medium.ttf);
+  font-family: ubantu-light;
 }
